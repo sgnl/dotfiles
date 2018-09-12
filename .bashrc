@@ -44,3 +44,5 @@ fi
 if [[ -x "$(command -v tmux)" && "$(ps -o 'cmd=' -p $(ps -o 'ppid=' -p $$))" = "alacritty" ]]; then
     [ -z "$TMUX" ] && { tmux attach-session || exec tmux && exit; }
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
